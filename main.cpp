@@ -1,10 +1,16 @@
 #include "Restaurant.h"
+#include "util.h"
 
 int main()
 {
   Restaurant r;
-
-  r.run_sim(); //Running the simulation
+  bool again = true;
+  
+  while(again)
+    {
+      r.run_sim(); //Running the simulation
+      again = go_again();
+    }
 
   return 0;
 }

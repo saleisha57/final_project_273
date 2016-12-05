@@ -9,8 +9,7 @@ class Restaurant
 {
  protected:
   
-  int max, min; //two protected ints for min and max.
-
+  int max_c, min_c, max_s, min_s, max_b, min_b; //two protected ints for min and max.
 
  public:
 
@@ -23,32 +22,56 @@ class Restaurant
     cout<<"in init"<<endl; //Testing entrance to function
     
     cout<<"Enter min cooking time: "<<endl;
-    cin>>min;
+    cin>>min_c;
     cout<<"Enter max cooking time: "<<endl;
-    cin>>max;
+    cin>>max_c;
     
-    while(min > max) // Making sure min is less than max.
+    while(min_c > max_c) // Making sure min is less than max.
       {
 	cout<<"Min cannot be greater than max. Try again."<<endl;
 	cout<<"Enter min cooking time: "<<endl;
-	cin>>min;
+	cin>>min_c;
 	cout<<"Enter max cooking time: "<<endl;
-	cin>>max;	
+	cin>>max_c;	
+      }
+
+    cout<<"Enter min serving time: "<<endl;
+    cin>>min_s;
+    cout<<"Enter max serving time: "<<endl;
+    cin>>max_s;
+    
+    while(min_s > max_s) // Making sure min is less than max.
+      {
+	cout<<"Min cannot be greater than max. Try again."<<endl;
+	cout<<"Enter min serving time: "<<endl;
+	cin>>min_s;
+	cout<<"Enter max serving time: "<<endl;
+	cin>>max_s;	
+      }
+
+    cout<<"Enter min cleaning time: "<<endl;
+    cin>>min_b;
+    cout<<"Enter max cleaning time: "<<endl;
+    cin>>max_b;
+    
+    while(min_b > max_b) // Making sure min is less than max.
+      {
+	cout<<"Min cannot be greater than max. Try again."<<endl;
+	cout<<"Enter min cleaning time: "<<endl;
+	cin>>min_b;
+	cout<<"Enter max cleaning time: "<<endl;
+	cin>>max_b;	
       }
     
-    
-    Cook c(max, min); //Testing creation
-    
-    do_stuff(c);
-      
+    do_stuff();
       
   }//Will implement more later on.
   
 
-  void do_stuff(Cook cook)
+  void do_stuff()
   {//will run the simulation.
-    cook.do_work(); // Testing do_work()
-    cout<<"in run_sim"<<endl; //Testing entrance to function.
+    //   cook.do_work(); // Testing do_work()
+    cout<<"in do_stuff"<<endl; //Testing entrance to function.
   };
 
 };
