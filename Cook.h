@@ -1,6 +1,8 @@
 #ifndef __COOK_H__
 #define __COOK_H__
 
+#include "Staff.h"
+
 class Cook : public Staff
 {
  protected:
@@ -18,7 +20,7 @@ class Cook : public Staff
     
     min_time_c = min; //setting min time
     
-    std::cout<<"In con"<<std::endl; //lazy did not want to type cnstrctr
+    cout<<"In con"<<endl; //lazy did not want to type cnstrctr
     
   };
   
