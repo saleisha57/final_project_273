@@ -4,13 +4,14 @@
 #include "Cook.h"
 #include "BusBoy.h"
 #include "Servers.h"
+#include "Customers.h"
 
 class Restaurant
 {
  protected:
   
   unsigned short int max_c, min_c, max_s, min_s, max_b, min_b; //two protected ints for min and max.
-
+  
  public:
 
   Restaurant() {}; //Default constructor.
@@ -77,7 +78,11 @@ class Restaurant
     BusBoy b(max_b, min_b);
     b.do_work();
     cout<<"in do_stuff"<<endl; //Testing entrance to function.
+    Customers cust;
+    cust.make_order();
   }
+
+  //friend class Customers;
 
 };
 
