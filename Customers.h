@@ -1,10 +1,11 @@
 #ifndef __CUSTOMERS_H__
 #define __CUSTOMERS_H__
 
+#include "base.h"
 
 class Customers
 {
-  //protected:
+  protected:
   
 
  public:
