@@ -7,15 +7,15 @@ class Cook : public Staff
 {
  protected:
   
-  int num_cooks;
-  int max_time_c;
-  int min_time_c;
+  unsigned short int num_cooks;
+  unsigned short int max_time_c;
+  unsigned short int min_time_c;
   
  public:
 
-  Cook();
+  Cook() {};
   
-  Cook(int max, int min){
+  Cook(unsigned short int max, unsigned short int min){
     max_time_c = max; // setting max time
     
     min_time_c = min; //setting min time
@@ -28,7 +28,7 @@ class Cook : public Staff
   {
     //possible pay rate
     
-    std::cout<<"i am here"<<std::endl; //testing enter of function 
+    std::cout<<"in cook"<<std::endl; //testing enter of function 
     
   } 
   

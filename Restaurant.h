@@ -2,14 +2,14 @@
 #define __RESTAURANT_H__
 
 #include "Cook.h"
-//#include "BusBoy.h"  (have not made these yet)
-//#include "Server.h"
+#include "BusBoy.h"
+#include "Servers.h"
 
 class Restaurant
 {
  protected:
   
-  int max_c, min_c, max_s, min_s, max_b, min_b; //two protected ints for min and max.
+  unsigned short int max_c, min_c, max_s, min_s, max_b, min_b; //two protected ints for min and max.
 
  public:
 
@@ -26,9 +26,9 @@ class Restaurant
     cout<<"Enter max cooking time: "<<endl;
     cin>>max_c;
     
-    while(min_c > max_c) // Making sure min is less than max.
+    while(min_c > max_c || min_c == max_c) // Making sure min is less than max.
       {
-	cout<<"Min cannot be greater than max. Try again."<<endl;
+	cout<<"Min cannot be greater than or equal to max. Try again."<<endl;
 	cout<<"Enter min cooking time: "<<endl;
 	cin>>min_c;
 	cout<<"Enter max cooking time: "<<endl;
@@ -40,9 +40,9 @@ class Restaurant
     cout<<"Enter max serving time: "<<endl;
     cin>>max_s;
     
-    while(min_s > max_s) // Making sure min is less than max.
+    while(min_s > max_s || min_s == max_s) // Making sure min is less than max.
       {
-	cout<<"Min cannot be greater than max. Try again."<<endl;
+	cout<<"Min cannot be greater than or equal to max. Try again."<<endl;
 	cout<<"Enter min serving time: "<<endl;
 	cin>>min_s;
 	cout<<"Enter max serving time: "<<endl;
@@ -54,9 +54,9 @@ class Restaurant
     cout<<"Enter max cleaning time: "<<endl;
     cin>>max_b;
     
-    while(min_b > max_b) // Making sure min is less than max.
+    while(min_b > max_b || min_b == max_b) // Making sure min is less than max.
       {
-	cout<<"Min cannot be greater than max. Try again."<<endl;
+	cout<<"Min cannot be greater than or equal to max. Try again."<<endl;
 	cout<<"Enter min cleaning time: "<<endl;
 	cin>>min_b;
 	cout<<"Enter max cleaning time: "<<endl;
@@ -70,9 +70,14 @@ class Restaurant
 
   void do_stuff()
   {//will run the simulation.
-    //   cook.do_work(); // Testing do_work()
+    Cook c(max_c, min_c);
+    c.do_work(); // Testing do_work()
+    Servers s(max_s, min_s);
+    s.do_work();
+    BusBoy b(max_b, min_b);
+    b.do_work();
     cout<<"in do_stuff"<<endl; //Testing entrance to function.
-  };
+  }
 
 };
 

@@ -4,6 +4,7 @@
 #include<iostream>
 #include<stdlib.h>
 #include<ctime>
+#include<string.h>
 
 using std::cout;
 using std::endl;
