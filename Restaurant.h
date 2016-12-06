@@ -11,6 +11,7 @@ class Restaurant
  protected:
   
   unsigned short int max_c, min_c, max_s, min_s, max_b, min_b; //two protected ints for min and max.
+  unsigned short int num_tables, user_choice;
   
  public:
 
@@ -64,6 +65,15 @@ class Restaurant
 	cin>>max_b;	
       }
     
+    cout<<"Please enter a number between 1 and 10 for the number of tables: "<<endl;
+    cin>>num_tables;
+
+    while( num_tables < 1 || num_tables > 10 )
+      {
+	cout<<"Please enter a number between 1 and 10 for the number of tables: "<<endl;
+	cin>>num_tables;
+      }
+
     do_stuff();
       
   }//Will implement more later on.
@@ -78,8 +88,15 @@ class Restaurant
     BusBoy b(max_b, min_b);
     b.do_work();
     cout<<"in do_stuff"<<endl; //Testing entrance to function.
+    
+    
+
     Customers cust;
+
+    
     cust.make_order();
+
+
   }
 
   //friend class Customers;

@@ -5,6 +5,7 @@
 #include<stdlib.h>
 #include<ctime>
 #include<string.h>
+#include<queue>
 
 using std::cout;
 using std::endl;
