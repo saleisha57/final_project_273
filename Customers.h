@@ -13,7 +13,9 @@ class Customers
   //function to allow the customer to make orders
   void make_order()
   {
-    cout<<"Customers"<<endl;
+    int num = rand() % 10;    
+
+    cout<<"Customers and num is: "<<num<<endl;
   }
   
 };
