@@ -82,18 +82,12 @@ class Restaurant
   void do_stuff()
   {//will run the simulation.
     Cook c(max_c, min_c);
-    c.do_work(); // Testing do_work()
+    c.do_work();
     Servers s(max_s, min_s);
     s.do_work();
     BusBoy b(max_b, min_b);
-    b.do_work();
-    cout<<"in do_stuff"<<endl; //Testing entrance to function.
-    
-    
-
+    b.do_work(); 
     Customers cust;
-
-    
     cust.make_order();
 
 
