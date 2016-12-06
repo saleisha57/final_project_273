@@ -1,6 +1,8 @@
 #ifndef __MENU_H__
 #define __MENU_H__
 
+#include "base.h"
+
 class Menu
 {
  protected:
@@ -11,7 +13,7 @@ class Menu
   
   Menu() {};
   
-  virtual void make_order() {};
+  virtual void make_order() {} = 0;
   
   void SetPrice(double number)
   {
