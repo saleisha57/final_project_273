@@ -12,6 +12,7 @@ class Restaurant
   
   unsigned short int max_c, min_c, max_s, min_s, max_b, min_b; //two protected ints for min and max.
   unsigned short int num_tables, user_choice;
+  //  queue<Customers *> cust;
   
  public:
 
@@ -87,9 +88,16 @@ class Restaurant
     s.do_work();
     BusBoy b(max_b, min_b);
     b.do_work(); 
+    //  if(!cust.empty())
+    //{
+    //Customers* customer = cust.front();
+	
+    //	for(int i = 0; i < 2; i++)
+    //	  cout
+    //	  customer->make_order();	
     Customers cust;
     cust.make_order();
-
+	//}
 
   }
 

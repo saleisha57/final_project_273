@@ -6,10 +6,15 @@
 #include<ctime>
 #include<string.h>
 #include<queue>
+#include<map>
+#include<utility>
 
 using std::cout;
 using std::endl;
 using std::cin;
 using std::string;
+using std::queue;
+using std::map;
+using std::make_pair;
 
 #endif
