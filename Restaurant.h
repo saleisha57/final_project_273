@@ -21,9 +21,6 @@ class Restaurant
 
   void run_sim() //Init all pieces for the restaurant.
   {//Testing to make sure that initialize will construct a Cook and so on.
-    
-    cout<<"in init"<<endl; //Testing entrance to function
-    
     cout<<"Enter min cooking time: "<<endl;
     cin>>min_c;
     cout<<"Enter max cooking time: "<<endl;

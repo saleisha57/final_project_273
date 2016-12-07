@@ -7,7 +7,7 @@ class BusBoy : public Staff
 {
  protected:
   
-  unsigned short int num_cooks;
+  unsigned short int num_bb;
   unsigned short int max_time_b;
   unsigned short int min_time_b;
   

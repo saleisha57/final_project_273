@@ -19,9 +19,12 @@ class Customers
     int num = rand() % 10;
     double amt;
     
-    m.set_menu();
-    amt = m.order();
-    
+    if(num >= 0 && num < 10)
+      {
+	m.set_menu();
+	amt = m.order();
+      }    
+
     cout<<"Price amount is: "<<amt<<endl;
     
     eat();
