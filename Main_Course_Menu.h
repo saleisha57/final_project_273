@@ -14,7 +14,6 @@ class Main_Course_Menu : public Menu
   Main_Course_Menu() {};
   
 
-
   double order()
   {
     int num = rand() % 5; // generating a random number to determine the food choice.
@@ -25,6 +24,7 @@ class Main_Course_Menu : public Menu
 	
 	if( it_m != main_menu_map.end() )
 	  cout<<"Order is: "<<it_m->first<<" for: $"<<it_m->second<<endl; // print out order
+	cout<<""<<endl;
 	return it_m->second;
       }
 
@@ -34,6 +34,7 @@ class Main_Course_Menu : public Menu
 	
 	if( it_m != main_menu_map.end() )
 	  cout<<"Order is: "<<it_m->first<<" for: $"<<it_m->second<<endl; // print out order
+	cout<<""<<endl;
 	return it_m->second;
       }
 
@@ -43,6 +44,7 @@ class Main_Course_Menu : public Menu
 	
 	if( it_m != main_menu_map.end() )
 	  cout<<"Order is: "<<it_m->first<<" for: $"<<it_m->second<<endl; // print out order
+	cout<<""<<endl;
 	return it_m->second;
       }	
 
@@ -52,6 +54,7 @@ class Main_Course_Menu : public Menu
 	
 	if( it_m != main_menu_map.end() )
 	  cout<<"Order is: "<<it_m->first<<" for: $"<<it_m->second<<endl; // print out order
+	cout<<""<<endl;
 	return it_m->second;
       }
 
@@ -61,6 +64,7 @@ class Main_Course_Menu : public Menu
 	
 	if( it_m != main_menu_map.end() )
 	  cout<<"Order is: "<<it_m->first<<" for: $"<<it_m->second<<endl; // print out order
+	cout<<""<<endl;
 	return it_m->second;
       }
 
@@ -80,6 +84,7 @@ class Main_Course_Menu : public Menu
     cout<<"Main Course:"<<endl;
     for(map<string,double>::iterator it = main_menu_map.begin(); it != main_menu_map.end(); ++it)
       cout<<"["<<it->first<<", "<<it->second<<"]"<<endl;
+    cout<<""<<endl;
   }
 
 

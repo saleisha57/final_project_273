@@ -19,16 +19,12 @@ class Servers : public Staff
     max_time_s = max; // setting max time
     
     min_time_s = min; //setting min time
-    
-    cout<<"In con"<<endl; //lazy did not want to type cnstrctr
-    
+     
   };
   
   void do_work()
   {
     //possible pay rate
-    
-    std::cout<<"in servers"<<std::endl; //testing enter of function 
     
   } 
   

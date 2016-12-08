@@ -19,17 +19,13 @@ class Cook : public Staff
     max_time_c = max; // setting max time
     
     min_time_c = min; //setting min time
-    
-    cout<<"In con"<<endl; //lazy did not want to type cnstrctr
-    
+
   };
   
   void do_work()
   {
     //possible pay rate
-    
-    std::cout<<"in cook"<<std::endl; //testing enter of function 
-    
+
   } 
   
 };
