@@ -7,7 +7,6 @@
 #include<string.h>
 #include<queue>
 #include<map>
-#include<utility>
 
 using std::cout;
 using std::endl;
