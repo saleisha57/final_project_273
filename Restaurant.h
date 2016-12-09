@@ -5,14 +5,17 @@
 #include "BusBoy.h"
 #include "Servers.h"
 #include "Customers.h"
+# include "Finances.h"
 
 class Restaurant
 {
- protected:
+ private:
   
   unsigned short int max_c, min_c, max_s, min_s, max_b, min_b; //two protected ints for min and max.
   unsigned short int num_tables, user_choice;
-  //  queue<Customers *> cust;
+  queue<Customers *> cust;
+  Finances fin;
+  double cust_pay;
   
  public:
 
@@ -21,6 +24,10 @@ class Restaurant
 
   void run_sim() //Init all pieces for the restaurant.
   {//Testing to make sure that initialize will construct a Cook and so on.
+    
+    //cout<<"Enter customer arrival rate: "<<endl;
+    
+
     cout<<"Enter min cooking time: "<<endl;
     cin>>min_c;
     cout<<"Enter max cooking time: "<<endl;
@@ -76,7 +83,8 @@ class Restaurant
       
   }//Will implement more later on.
   
-
+  
+  
   void do_stuff()
   {//will run the simulation.
     Cook c(max_c, min_c);
@@ -85,16 +93,30 @@ class Restaurant
     s.do_work();
     BusBoy b(max_b, min_b);
     b.do_work(); 
-    //  if(!cust.empty())
-    //{
-    //Customers* customer = cust.front();
-	
-    //	for(int i = 0; i < 2; i++)
-    //	  cout
-    //	  customer->make_order();	
+    
     Customers cust;
-    cust.make_order();
-	//}
+    
+    cust_pay = 0; //TESTING OUT SOEM STUFF WITH FINANCES.H
+    for(int i = 0; i < 10; i ++)
+      cust_pay += cust.make_order();
+    
+    cout<<"CUST PAY:"<<cust_pay<<endl;
+    
+    fin.setProfits(cust_pay);
+
+    cout<<"PROFITS: "<<fin.getProfits()<<endl; //TESTING OUT SOME STUFF WITH FINANCES.H
+    
+    /*
+    if(!cust.empty())
+    {
+      Customers *customer = cust.front();
+      
+      for(int i = 0; i < 2; i++)
+	cust[i].make_order();	
+      //Customers cust;
+      //customer.make_order();
+    }
+    */
 
   }
 

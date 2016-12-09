@@ -20,7 +20,7 @@ class Customers
   Customers() {};
   
   //function to allow the customer to make orders
-  void make_order()
+  double make_order()
   {
     int num = rand() % 10;
     double amt = 0;
@@ -51,6 +51,8 @@ class Customers
     eat();
 
     cout<<"Customers and num is: "<<num<<endl;
+
+    return amt;
   }
   
   void eat()
