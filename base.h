@@ -5,14 +5,14 @@
 #include<stdlib.h>
 #include<ctime>
 #include<string.h>
-#include<deque>
+#include<queue>
 #include<map>
 
 using std::cout;
 using std::endl;
 using std::cin;
 using std::string;
-using std::deque;
+using std::queue;
 using std::map;
 using std::make_pair;
 
