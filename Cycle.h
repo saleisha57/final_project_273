@@ -34,9 +34,10 @@ class Cycle
     prof = 0;
     for(clock = 0; clock < total_time; clock++)
       {
-       	prof += r.run_sim(clock);
+       	prof += r.run_sim(clock, arrival_rate);
 	fin.setProfits(prof);
 	cout<<"PROFITS: "<<fin.getProfits()<<endl;
+	cout<<""<<endl;
 	Cook co(max_c, min_c);
 	co.do_work();
 	Servers s(max_s, min_s);
@@ -45,7 +46,10 @@ class Cycle
 	b.do_work(); 
 	//r.run_sim(clock);
       }
-
+    fin.making_a_profit(fin.getProfits());
+    cout<<"Money in. Balance: "<<fin.getBalance()<<endl;
+    fin.paying_expenses(9.97*(total_time/2));
+    cout<<"Workers paid. Balance: "<<fin.getBalance()<<endl;
   };
 
 

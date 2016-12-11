@@ -42,11 +42,11 @@ class Finances
   //default constructor
   Finances() {};
 
-  Finances(double profit, double expense)
+  /* Finances(double profit, double expense)
     {
       making_a_profit(profit);
       paying_expenses(expense);
-    }
+      }*/
 
 };
 
