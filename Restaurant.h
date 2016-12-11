@@ -5,7 +5,7 @@
 #include "BusBoy.h"
 #include "Servers.h"
 #include "Customers.h"
-# include "Finances.h"
+//# include "Finances.h"
 
 class Restaurant
 {
@@ -14,7 +14,7 @@ class Restaurant
   unsigned short int num_served;
   unsigned short int user_choice;
   //queue<Customers *> cust;
-  Finances fin;
+  // Finances fin;
   double cust_pay;
   
  public:
@@ -22,14 +22,13 @@ class Restaurant
   Restaurant() {}; //Default constructor.
 
 
-  void run_sim(int clock)
+  double run_sim(int clock)
   {
-    do_stuff(clock);
+   return do_stuff(clock);
   }
   
   
-  
-  void do_stuff(int clock)
+  double do_stuff(int clock)
   {//will run the simulation.
      /*    
    
@@ -81,10 +80,7 @@ class Restaurant
       }
     cout<<"CUST PAY:"<<cust_pay<<endl;
     
-    fin.setProfits(cust_pay);
-
-    cout<<"PROFITS: "<<fin.getProfits()<<" number customers served: "<<num_served<<endl; //TESTING OUT SOME STUFF WITH FINANCES.H
-    
+    return cust_pay;
   }
 
   //friend class Customers;

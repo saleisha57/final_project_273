@@ -2,6 +2,7 @@
 #define _CYCLE_H_
 
 #include "base.h"
+#include "Finances.h"
 #include "Restaurant.h"
 #include "Cook.h"
 #include "Servers.h"
@@ -16,6 +17,8 @@ class Cycle
   unsigned short int max_c, min_c, max_s, min_s, max_b, min_b; //two protected ints for min and max.
   unsigned short int arrival_rate;
   unsigned short int num_tables, num_open;
+  Finances fin;
+  double prof;
 
  public:
   Cycle() {};
@@ -28,11 +31,14 @@ class Cycle
     Restaurant r;
     int clock;
     set_cycle();
+    prof = 0;
     for(clock = 0; clock < total_time; clock++)
       {
-	r.run_sim(clock);
-	Cook c(max_c, min_c);
-	c.do_work();
+       	prof += r.run_sim(clock);
+	fin.setProfits(prof);
+	cout<<"PROFITS: "<<fin.getProfits()<<endl;
+	Cook co(max_c, min_c);
+	co.do_work();
 	Servers s(max_s, min_s);
 	s.do_work();
 	BusBoy b(max_b, min_b);
