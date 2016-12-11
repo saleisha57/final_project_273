@@ -25,7 +25,7 @@ class Cook : public Staff
   void do_work()
   {
     //possible pay rate
-
+    
   } 
   
 };

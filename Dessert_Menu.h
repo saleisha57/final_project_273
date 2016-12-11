@@ -81,11 +81,13 @@ class Dessert_Menu : public Menu
     dessert_menu_map.insert(make_pair("Cookie", 0.55));
     dessert_menu_map.insert(make_pair("Ice Cream", 1.15));
     dessert_menu_map.insert(make_pair("Creme Brulee", 1.35));
-    cout<<"Dessert Menu:"<<endl;
-    for(map<string,double>::iterator it = dessert_menu_map.begin(); it != dessert_menu_map.end(); ++it)
-      cout<<"["<<it->first<<", "<<it->second<<"]"<<endl;
-    cout<<""<<endl;
-  }
+    /*    
+	  cout<<"Dessert Menu:"<<endl;
+	  for(map<string,double>::iterator it = dessert_menu_map.begin(); it != dessert_menu_map.end(); ++it)
+	  cout<<"["<<it->first<<", "<<it->second<<"]"<<endl;
+	  cout<<""<<endl;
+    */  
+}
 
 
 };

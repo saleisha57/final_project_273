@@ -81,11 +81,13 @@ class Appetizer_Menu : public Menu
     appetizer_menu_map.insert(make_pair("Salad", 1.55));
     appetizer_menu_map.insert(make_pair("Bread Sticks", 0.65));
     appetizer_menu_map.insert(make_pair("Fruit Cup", 0.75));
-    cout<<"Appetizer Menu:"<<endl;
-    for(map<string,double>::iterator it = appetizer_menu_map.begin(); it != appetizer_menu_map.end(); ++it)
-      cout<<"["<<it->first<<", "<<it->second<<"]"<<endl;
-    cout<<""<<endl;
-  }
+    /*    
+	  cout<<"Appetizer Menu:"<<endl;
+	  for(map<string,double>::iterator it = appetizer_menu_map.begin(); it != appetizer_menu_map.end(); ++it)
+	  cout<<"["<<it->first<<", "<<it->second<<"]"<<endl;
+	  cout<<""<<endl;
+    */  
+}
 
 
 };

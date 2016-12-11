@@ -1,5 +1,5 @@
-EXENAME=final_sim
-CXXFLAGS=-Wall -ansi -pedantic -ggdb
+EXENAME=final
+CXXFLAGS=-Wall -ansi -pedantic -ggdb -std=c++0x
 LFLAGS=
 CXX=g++
 

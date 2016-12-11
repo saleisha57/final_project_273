@@ -81,10 +81,12 @@ class Drink_Menu : public Menu
     drink_menu_map.insert(make_pair("Chocolate Milk", 1.35));
     drink_menu_map.insert(make_pair("Water", 0.25));
     drink_menu_map.insert(make_pair("Fruit Juice", 1.15));
-    cout<<"Drink Menu:"<<endl;
-    for(map<string,double>::iterator it = drink_menu_map.begin(); it != drink_menu_map.end(); ++it)
-      cout<<"["<<it->first<<", "<<it->second<<"]"<<endl;
-    cout<<""<<endl;
+    /*    
+	  cout<<"Drink Menu:"<<endl;
+	  for(map<string,double>::iterator it = drink_menu_map.begin(); it != drink_menu_map.end(); ++it)
+	  cout<<"["<<it->first<<", "<<it->second<<"]"<<endl;
+	  cout<<""<<endl;
+    */
   }
 
 

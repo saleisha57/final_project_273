@@ -12,7 +12,8 @@ class Restaurant
  private:
   
   unsigned short int max_c, min_c, max_s, min_s, max_b, min_b; //two protected ints for min and max.
-  unsigned short int num_tables, user_choice;
+  unsigned short int num_served, arrival_rate;
+  unsigned short int num_tables, num_open, user_choice;
   queue<Customers *> cust;
   Finances fin;
   double cust_pay;
@@ -25,15 +26,15 @@ class Restaurant
   void run_sim() //Init all pieces for the restaurant.
   {//Testing to make sure that initialize will construct a Cook and so on.
     
-    //cout<<"Enter customer arrival rate: "<<endl;
+    cout<<"Enter customer arrival rate: "<<endl;
+    cin>>arrival_rate;
     
-
     cout<<"Enter min cooking time: "<<endl;
     cin>>min_c;
     cout<<"Enter max cooking time: "<<endl;
     cin>>max_c;
     
-    while(min_c > max_c || min_c == max_c) // Making sure min is less than max.
+    while(min_c >= max_c) // Making sure min is less than max.
       {
 	cout<<"Min cannot be greater than or equal to max. Try again."<<endl;
 	cout<<"Enter min cooking time: "<<endl;
@@ -47,7 +48,7 @@ class Restaurant
     cout<<"Enter max serving time: "<<endl;
     cin>>max_s;
     
-    while(min_s > max_s || min_s == max_s) // Making sure min is less than max.
+    while(min_s >= max_s) // Making sure min is less than max.
       {
 	cout<<"Min cannot be greater than or equal to max. Try again."<<endl;
 	cout<<"Enter min serving time: "<<endl;
@@ -61,7 +62,7 @@ class Restaurant
     cout<<"Enter max cleaning time: "<<endl;
     cin>>max_b;
     
-    while(min_b > max_b || min_b == max_b) // Making sure min is less than max.
+    while(min_b >= max_b) // Making sure min is less than max.
       {
 	cout<<"Min cannot be greater than or equal to max. Try again."<<endl;
 	cout<<"Enter min cleaning time: "<<endl;
@@ -94,30 +95,63 @@ class Restaurant
     BusBoy b(max_b, min_b);
     b.do_work(); 
     
-    Customers cust;
+    //Customers cust;
     
+    if(cust.empty())
+      {
+	Customers *customer = cust.front(); // ATTEMPTING TO USE QUEUES (not going so weel for me right now)
+	cout<<"Here"<<endl;
+	
+	num_open = num_tables;
+	while( num_open <= num_tables )
+	  {
+	    
+	    cust.push(new Customers());
+	    
+	    cust_pay = 0; //TESTING OUT SOEM STUFF WITH FINANCES.H
+	    num_served = 0;
+	    for(unsigned int i = 0; i != cust.size(); i ++)
+	      {
+		cout<<"I am here"<<endl;
+		cust_pay += customer->make_order();
+		num_served++;
+		//cout<<i<<endl;
+	      }
+	    cout<<"CUST PAY:"<<cust_pay<<endl;
+	    
+	    fin.setProfits(cust_pay);
+	    
+	    cout<<"PROFITS: "<<fin.getProfits()<<" number customers served: "<<num_served<<endl; //TESTING OUT SOME STUFF WITH FINANCES.H
+	    
+	    num_open--;
+	  }	
+	//cust.pop();
+	
+	//Customers cust;
+	//customer.make_order();
+      }
+      else
+      {
+      if(((rand()) / RAND_MAX) < arrival_rate)
+      cust.push(new Customers());
+      }
+
+    
+    //  Customers cust;
+    /*
     cust_pay = 0; //TESTING OUT SOEM STUFF WITH FINANCES.H
-    for(int i = 0; i < 10; i ++)
-      cust_pay += cust.make_order();
-    
+    num_served = 0;
+    for(int i = 0; i < 100; i ++)
+      {
+	cust_pay += *customer.make_order();
+	num_served++;
+      }
     cout<<"CUST PAY:"<<cust_pay<<endl;
     
     fin.setProfits(cust_pay);
 
-    cout<<"PROFITS: "<<fin.getProfits()<<endl; //TESTING OUT SOME STUFF WITH FINANCES.H
-    
-    /*
-    if(!cust.empty())
-    {
-      Customers *customer = cust.front();
-      
-      for(int i = 0; i < 2; i++)
-	cust[i].make_order();	
-      //Customers cust;
-      //customer.make_order();
-    }
-    */
-
+    cout<<"PROFITS: "<<fin.getProfits()<<" number customers served: "<<num_served<<endl; //TESTING OUT SOME STUFF WITH FINANCES.H
+    */   
   }
 
   //friend class Customers;

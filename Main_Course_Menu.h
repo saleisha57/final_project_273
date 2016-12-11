@@ -81,10 +81,12 @@ class Main_Course_Menu : public Menu
     main_menu_map.insert(make_pair("Corn Dog", 3.55));
     main_menu_map.insert(make_pair("Chicken Strips", 3.55));
     main_menu_map.insert(make_pair("Grilled Cheese", 2.55));
-    cout<<"Main Course:"<<endl;
-    for(map<string,double>::iterator it = main_menu_map.begin(); it != main_menu_map.end(); ++it)
+    //cout<<"Main Course:"<<endl;
+    /*
+      for(map<string,double>::iterator it = main_menu_map.begin(); it != main_menu_map.end(); ++it)
       cout<<"["<<it->first<<", "<<it->second<<"]"<<endl;
-    cout<<""<<endl;
+      cout<<""<<endl;
+    */  
   }
 
 

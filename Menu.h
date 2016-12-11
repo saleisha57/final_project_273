@@ -6,8 +6,8 @@
 class Menu
 {
  protected:
-  double price;
-  string menu_type;
+  //  double price;
+  // string menu_type;
  
 
  public:

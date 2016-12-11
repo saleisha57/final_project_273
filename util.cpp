@@ -5,7 +5,7 @@ bool go_again()
 {
   char resp[100];
 
-  cout<<"Go again? yes or no? ";
+  cout<<"Run simulation again? yes or no? ";
   cin>>resp;
 
   return strcmp(resp, "yes") == 0;
