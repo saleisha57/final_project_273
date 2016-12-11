@@ -22,9 +22,9 @@ class Main_Course_Menu : public Menu
       {
 	it_m = main_menu_map.find("Tomato Soup"); // finding tomato soup in map.
 	
-	if( it_m != main_menu_map.end() )
-	  cout<<"Order is: "<<it_m->first<<" for: $"<<it_m->second<<endl; // print out order
-	cout<<""<<endl;
+	//if( it_m != main_menu_map.end() )
+	//cout<<"Order is: "<<it_m->first<<" for: $"<<it_m->second<<endl; // print out order
+	//cout<<""<<endl;
 	return it_m->second;
       }
 
@@ -32,9 +32,9 @@ class Main_Course_Menu : public Menu
       {
 	it_m = main_menu_map.find("Hamburger"); // finding hamburger in map.
 	
-	if( it_m != main_menu_map.end() )
-	  cout<<"Order is: "<<it_m->first<<" for: $"<<it_m->second<<endl; // print out order
-	cout<<""<<endl;
+	//if( it_m != main_menu_map.end() )
+	//cout<<"Order is: "<<it_m->first<<" for: $"<<it_m->second<<endl; // print out order
+	//cout<<""<<endl;
 	return it_m->second;
       }
 
@@ -42,9 +42,9 @@ class Main_Course_Menu : public Menu
       {
 	it_m = main_menu_map.find("Corn Dog"); // finding corn dog in map.
 	
-	if( it_m != main_menu_map.end() )
-	  cout<<"Order is: "<<it_m->first<<" for: $"<<it_m->second<<endl; // print out order
-	cout<<""<<endl;
+	//if( it_m != main_menu_map.end() )
+	//cout<<"Order is: "<<it_m->first<<" for: $"<<it_m->second<<endl; // print out order
+	//cout<<""<<endl;
 	return it_m->second;
       }	
 
@@ -52,9 +52,9 @@ class Main_Course_Menu : public Menu
       {
 	it_m = main_menu_map.find("Chicken Strips"); // finding chicken strips in map.
 	
-	if( it_m != main_menu_map.end() )
-	  cout<<"Order is: "<<it_m->first<<" for: $"<<it_m->second<<endl; // print out order
-	cout<<""<<endl;
+	//if( it_m != main_menu_map.end() )
+	//cout<<"Order is: "<<it_m->first<<" for: $"<<it_m->second<<endl; // print out order
+	//cout<<""<<endl;
 	return it_m->second;
       }
 
@@ -62,9 +62,9 @@ class Main_Course_Menu : public Menu
       {
 	it_m = main_menu_map.find("Grilled Cheese"); // finding grilled cheese in map.
 	
-	if( it_m != main_menu_map.end() )
-	  cout<<"Order is: "<<it_m->first<<" for: $"<<it_m->second<<endl; // print out order
-	cout<<""<<endl;
+	//	if( it_m != main_menu_map.end() )
+	// cout<<"Order is: "<<it_m->first<<" for: $"<<it_m->second<<endl; // print out order
+	//cout<<""<<endl;
 	return it_m->second;
       }
 

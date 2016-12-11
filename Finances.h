@@ -28,12 +28,25 @@ class Finances
   void setExpenses(double Expenses) { expenses = Expenses; }
 
   //will add to balance
-  double making_a_profit(double);
+  void making_a_profit(double days_profit) 
+  {
+    balance += days_profit;
+  };
+
   //will subtract from balance
-  double paying_expenses(double);
+  void paying_expenses(double days_expenses)
+  {
+    balance -= days_expenses;
+  };
 
   //default constructor
-  Finances finances();
+  Finances() {};
+
+  Finances(double profit, double expense)
+    {
+      making_a_profit(profit);
+      paying_expenses(expense);
+    }
 
 };
 

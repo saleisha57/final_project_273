@@ -30,13 +30,14 @@ class Cycle
     set_cycle();
     for(clock = 0; clock < total_time; clock++)
       {
+	r.run_sim(clock);
 	Cook c(max_c, min_c);
 	c.do_work();
 	Servers s(max_s, min_s);
 	s.do_work();
 	BusBoy b(max_b, min_b);
 	b.do_work(); 
-	r.run_sim(clock);
+	//r.run_sim(clock);
       }
 
   };

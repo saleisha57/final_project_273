@@ -11,7 +11,6 @@ int main()
   while(again)
     {
       c.complete_a_cycle(); //Running the simulation
-
       again = go_again();
     }
 

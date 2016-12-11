@@ -22,9 +22,9 @@ class Appetizer_Menu : public Menu
       {
 	it_a = appetizer_menu_map.find("Potato Skin"); // finding tomato soup in map.
 	
-	if( it_a != appetizer_menu_map.end() )
-	  cout<<"Order is: "<<it_a->first<<" for: $"<<it_a->second<<endl; // print out order
-	cout<<""<<endl;
+	//	if( it_a != appetizer_menu_map.end() )
+	//cout<<"Order is: "<<it_a->first<<" for: $"<<it_a->second<<endl; // print out order
+	//cout<<""<<endl;
 	return it_a->second;
       }
 
@@ -32,9 +32,9 @@ class Appetizer_Menu : public Menu
       {
 	it_a = appetizer_menu_map.find("Cheese Fries"); // finding hamburger in map.
 	
-	if( it_a != appetizer_menu_map.end() )
-	  cout<<"Order is: "<<it_a->first<<" for: $"<<it_a->second<<endl; // print out order
-	cout<<""<<endl;
+	//if( it_a != appetizer_menu_map.end() )
+	//cout<<"Order is: "<<it_a->first<<" for: $"<<it_a->second<<endl; // print out order
+	//cout<<""<<endl;
 	return it_a->second;
       }
 
@@ -42,9 +42,9 @@ class Appetizer_Menu : public Menu
       {
 	it_a = appetizer_menu_map.find("Salad"); // finding corn dog in map.
 	
-	if( it_a != appetizer_menu_map.end() )
-	  cout<<"Order is: "<<it_a->first<<" for: $"<<it_a->second<<endl; // print out order
-	cout<<""<<endl;
+	//if( it_a != appetizer_menu_map.end() )
+	//cout<<"Order is: "<<it_a->first<<" for: $"<<it_a->second<<endl; // print out order
+	//cout<<""<<endl;
 	return it_a->second;
       }	
 
@@ -52,9 +52,9 @@ class Appetizer_Menu : public Menu
       {
 	it_a = appetizer_menu_map.find("Bread Sticks"); // finding chicken strips in map.
 	
-	if( it_a != appetizer_menu_map.end() )
-	  cout<<"Order is: "<<it_a->first<<" for: $"<<it_a->second<<endl; // print out order
-	cout<<""<<endl;
+	//if( it_a != appetizer_menu_map.end() )
+	//cout<<"Order is: "<<it_a->first<<" for: $"<<it_a->second<<endl; // print out order
+	//cout<<""<<endl;
 	return it_a->second;
       }
 
@@ -62,9 +62,9 @@ class Appetizer_Menu : public Menu
       {
 	it_a = appetizer_menu_map.find("Fruit Cup"); // finding grilled cheese in map.
 	
-	if( it_a != appetizer_menu_map.end() )
-	  cout<<"Order is: "<<it_a->first<<" for: $"<<it_a->second<<endl; // print out order
-	cout<<""<<endl;
+	//if( it_a != appetizer_menu_map.end() )
+	//cout<<"Order is: "<<it_a->first<<" for: $"<<it_a->second<<endl; // print out order
+	//cout<<""<<endl;
 	return it_a->second;
       }
 

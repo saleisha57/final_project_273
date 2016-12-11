@@ -46,18 +46,18 @@ class Customers
 	amt += ds.order();
       }
 
-    cout<<"Price amount is: "<<amt<<endl;
+    // cout<<"Price amount is: "<<amt<<endl;
     
     eat();
 
-    cout<<"Customers and num is: "<<num<<endl;
+    //  cout<<"Customers and num is: "<<num<<endl;
 
     return amt;
   }
   
   void eat()
   {
-    cout<<"tables: "<<endl; //leaving in cout to test entrance to function. (WILL IMPLEMENT WHEN TIME SET UP PROPERLY)
+    //cout<<"tables: "<<endl; //leaving in cout to test entrance to function. (WILL IMPLEMENT WHEN TIME SET UP PROPERLY)
   }
   
   
