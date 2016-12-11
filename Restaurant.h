@@ -14,7 +14,7 @@ class Restaurant
   unsigned short int max_c, min_c, max_s, min_s, max_b, min_b; //two protected ints for min and max.
   unsigned short int num_served, arrival_rate;
   unsigned short int num_tables, num_open, user_choice;
-  deque<Customers *> cust;
+  //deque<Customers *> cust;
   Finances fin;
   double cust_pay;
   
@@ -94,7 +94,7 @@ class Restaurant
     s.do_work();
     BusBoy b(max_b, min_b);
     b.do_work(); 
-    
+    /*    
    
     if(cust.empty())
       {
@@ -135,14 +135,14 @@ class Restaurant
 	cust.push_front(new Customers());
       }
 
+    */
+    Customers cust;
     
-    //  Customers cust;
-    /*
     cust_pay = 0; //TESTING OUT SOEM STUFF WITH FINANCES.H
     num_served = 0;
     for(int i = 0; i < 100; i ++)
       {
-	cust_pay += *customer.make_order();
+	cust_pay += cust.make_order();
 	num_served++;
       }
     cout<<"CUST PAY:"<<cust_pay<<endl;
@@ -150,7 +150,7 @@ class Restaurant
     fin.setProfits(cust_pay);
 
     cout<<"PROFITS: "<<fin.getProfits()<<" number customers served: "<<num_served<<endl; //TESTING OUT SOME STUFF WITH FINANCES.H
-    */   
+    
   }
 
   //friend class Customers;
