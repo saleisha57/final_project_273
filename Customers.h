@@ -57,7 +57,7 @@ class Customers
   
   void eat()
   {
-    cout<<"tables: "<<endl;
+    cout<<"tables: "<<endl; //leaving in cout to test entrance to function. (WILL IMPLEMENT WHEN TIME SET UP PROPERLY)
   }
   
   

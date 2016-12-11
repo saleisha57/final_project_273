@@ -1,16 +1,17 @@
-#include "Restaurant.h"
 #include "util.h"
+#include "Cycle.h"
 
 int main()
 {
   srand(time(0));
 
-  Restaurant r;
   bool again = true;
+  Cycle c;
   
   while(again)
     {
-      r.run_sim(); //Running the simulation
+      c.complete_a_cycle(); //Running the simulation
+
       again = go_again();
     }
 
