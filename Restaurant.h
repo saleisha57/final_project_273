@@ -14,7 +14,7 @@ class Restaurant
   unsigned short int max_c, min_c, max_s, min_s, max_b, min_b; //two protected ints for min and max.
   unsigned short int num_served, arrival_rate;
   unsigned short int num_tables, num_open, user_choice;
-  queue<Customers *> cust;
+  deque<Customers *> cust;
   Finances fin;
   double cust_pay;
   
@@ -95,27 +95,26 @@ class Restaurant
     BusBoy b(max_b, min_b);
     b.do_work(); 
     
-    //Customers cust;
-    
+   
     if(cust.empty())
       {
-	Customers *customer = cust.front(); // ATTEMPTING TO USE QUEUES (not going so weel for me right now)
+	Customers *customer = cust.front(); // ATTEMPTING TO USE QUEUES (not going so well for me right now) specifically deques
 	cout<<"Here"<<endl;
 	
 	num_open = num_tables;
 	while( num_open <= num_tables )
 	  {
 	    
-	    cust.push(new Customers());
+	    cust.push_front(new Customers());
 	    
 	    cust_pay = 0; //TESTING OUT SOEM STUFF WITH FINANCES.H
 	    num_served = 0;
-	    for(unsigned int i = 0; i != cust.size(); i ++)
+	    for(std::deque<Customers *>::iterator it = cust.begin(); it != cust.end(); ++it)
 	      {
 		cout<<"I am here"<<endl;
-		cust_pay += customer->make_order();
+		cust_pay += customer->make_order(); // SEG FAULT HERE
 		num_served++;
-		//cout<<i<<endl;
+		cout<<"I made it here"<<endl;
 	      }
 	    cout<<"CUST PAY:"<<cust_pay<<endl;
 	    
@@ -132,8 +131,8 @@ class Restaurant
       }
       else
       {
-      if(((rand()) / RAND_MAX) < arrival_rate)
-      cust.push(new Customers());
+	if(((rand()) / RAND_MAX) < arrival_rate)
+	cust.push_front(new Customers());
       }
 
     
