@@ -24,8 +24,9 @@ class Servers : public Staff
   
   void do_work(int clock)
   {
-    //possible pay rate
-    
+    if(clock - min_time_s > max_time_s)
+      for(clock = min_time_s; clock <= max_time_s; clock++)
+	;    
   } 
   
 };

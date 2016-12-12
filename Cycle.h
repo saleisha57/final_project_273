@@ -41,14 +41,15 @@ class Cycle
        	prof += r.run_sim(clock, arrival_rate);
 
 	fin.setProfits(prof);
-	cout<<"PROFITS: "<<fin.getProfits()<<endl;
-	cout<<""<<endl;
+	//cout<<"PROFITS: "<<fin.getProfits()<<endl;
+	//cout<<""<<endl;
 	
       }
     fin.making_a_profit(fin.getProfits());
-    cout<<"Money in. Balance: "<<fin.getBalance()<<endl;
-    fin.paying_expenses(9.97*((double)total_time/2));
-    cout<<"Workers paid. Balance: "<<fin.getBalance()<<endl;
+    cout<<"Current balance: "<<fin.getBalance()<<endl;
+    cout<<"Workers paid: "<<((9.97*total_time)*2)<<endl;
+    fin.paying_expenses((9.97*total_time)*2);
+    cout<<"Current balance: "<<fin.getBalance()<<endl;
   };
 
 

@@ -21,7 +21,7 @@ class Restaurant
 
   double run_sim(int clock, int arrival_rate)
   {
-    return do_stuff(clock, arrival_rate);
+    return do_stuff(clock, arrival_rate); 
   }
   
   
@@ -35,16 +35,15 @@ class Restaurant
       {
 	Customers custer;
 	
-	cust_pay = 0; //TESTING OUT SOME STUFF WITH FINANCES.H
-	for(unsigned int i = 0; i < cust.size(); i ++) // testing the ammount of money coming in from customers.
+	cust_pay = 0; 
+	for(int i = 0; i < arrival_rate; i ++) // testing the ammount of money coming in from customers.
 	  {
 	    //checking to see how many customers are in the queue
 	    cust_pay += custer.make_order();
 	  }
-	cout<<"CUST PAY:"<<cust_pay<<endl;
 	
 	cust.pop();
-
+	
 	return cust_pay;
       }
     
