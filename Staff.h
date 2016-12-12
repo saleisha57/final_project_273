@@ -9,7 +9,7 @@ class Staff
   
   Staff() {};
   
-  virtual void do_work() = 0;  
+  virtual void do_work(int clock) = 0;  
   
 };
 

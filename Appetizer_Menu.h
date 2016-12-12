@@ -76,11 +76,11 @@ class Appetizer_Menu : public Menu
 
   void set_menu()
   {
-    appetizer_menu_map.insert(make_pair("Potato Skin", 0.85));
-    appetizer_menu_map.insert(make_pair("Cheese Fries", 0.75));
-    appetizer_menu_map.insert(make_pair("Salad", 1.55));
-    appetizer_menu_map.insert(make_pair("Bread Sticks", 0.65));
-    appetizer_menu_map.insert(make_pair("Fruit Cup", 0.75));
+    appetizer_menu_map.insert(make_pair("Potato Skin", 2.55));
+    appetizer_menu_map.insert(make_pair("Cheese Fries", 4.55));
+    appetizer_menu_map.insert(make_pair("Salad", 5.55));
+    appetizer_menu_map.insert(make_pair("Bread Sticks", 3.55));
+    appetizer_menu_map.insert(make_pair("Fruit Cup", 9.99));
     /*    
 	  cout<<"Appetizer Menu:"<<endl;
 	  for(map<string,double>::iterator it = appetizer_menu_map.begin(); it != appetizer_menu_map.end(); ++it)

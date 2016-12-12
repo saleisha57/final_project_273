@@ -18,6 +18,11 @@ class Customers
  public:
   //default constructor
   Customers() {};
+
+  Customers(int arrival_rate)
+    {
+      make_order();
+    }
   
   //function to allow the customer to make orders
   double make_order()

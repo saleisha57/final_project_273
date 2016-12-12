@@ -76,11 +76,11 @@ class Dessert_Menu : public Menu
 
   void set_menu()
   {
-    dessert_menu_map.insert(make_pair("Cake", 1.15));
-    dessert_menu_map.insert(make_pair("Pie", 0.85));
-    dessert_menu_map.insert(make_pair("Cookie", 0.55));
-    dessert_menu_map.insert(make_pair("Ice Cream", 1.15));
-    dessert_menu_map.insert(make_pair("Creme Brulee", 1.35));
+    dessert_menu_map.insert(make_pair("Cake", 15.99));
+    dessert_menu_map.insert(make_pair("Pie", 14.99));
+    dessert_menu_map.insert(make_pair("Cookie", 2.55));
+    dessert_menu_map.insert(make_pair("Ice Cream", 7.99));
+    dessert_menu_map.insert(make_pair("Creme Brulee", 8.99));
     /*    
 	  cout<<"Dessert Menu:"<<endl;
 	  for(map<string,double>::iterator it = dessert_menu_map.begin(); it != dessert_menu_map.end(); ++it)

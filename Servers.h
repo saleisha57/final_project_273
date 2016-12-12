@@ -7,7 +7,7 @@ class Servers : public Staff
 {
  protected:
   
-  unsigned short int num_servers;
+  unsigned short int num_servers = 1;
   unsigned short int max_time_s;
   unsigned short int min_time_s;
   
@@ -22,7 +22,7 @@ class Servers : public Staff
      
   };
   
-  void do_work()
+  void do_work(int clock)
   {
     //possible pay rate
     

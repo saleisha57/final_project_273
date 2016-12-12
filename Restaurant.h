@@ -3,16 +3,13 @@
 
 #include "base.h"
 #include "Cook.h"
-#include "BusBoy.h"
 #include "Servers.h"
 #include "Customers.h"
-//# include "Finances.h"
 
 class Restaurant
 {
  private:
-  
-  unsigned short int num_served;
+
   unsigned short int user_choice;
   queue<Customers *> cust;
   double cust_pay;
@@ -32,23 +29,22 @@ class Restaurant
   {//will run the simulation.
     
     if(((rand()) / RAND_MAX) < arrival_rate)
-      cust.push(new Customers());
+      cust.push(new Customers(arrival_rate));
     
     if(!cust.empty())
       {
-	cust.pop();
-
 	Customers custer;
 	
-	cust_pay = 0; //TESTING OUT SOEM STUFF WITH FINANCES.H
-	num_served = 0;
-	for(int i = 0; i < 3; i ++) // testing the ammount of money coming in from customers.
+	cust_pay = 0; //TESTING OUT SOME STUFF WITH FINANCES.H
+	for(unsigned int i = 0; i < cust.size(); i ++) // testing the ammount of money coming in from customers.
 	  {
+	    //checking to see how many customers are in the queue
 	    cust_pay += custer.make_order();
-	    num_served++;
 	  }
 	cout<<"CUST PAY:"<<cust_pay<<endl;
 	
+	cust.pop();
+
 	return cust_pay;
       }
     

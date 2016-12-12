@@ -76,11 +76,11 @@ class Main_Course_Menu : public Menu
 
   void set_menu()
   {
-    main_menu_map.insert(make_pair("Tomato Soup", 1.55));
-    main_menu_map.insert(make_pair("Hamburger", 2.55));
-    main_menu_map.insert(make_pair("Corn Dog", 3.55));
-    main_menu_map.insert(make_pair("Chicken Strips", 3.55));
-    main_menu_map.insert(make_pair("Grilled Cheese", 2.55));
+    main_menu_map.insert(make_pair("Tomato Soup", 4.55));
+    main_menu_map.insert(make_pair("Hamburger", 10.55));
+    main_menu_map.insert(make_pair("Corn Dog", 5.55));
+    main_menu_map.insert(make_pair("Chicken Strips", 11.55));
+    main_menu_map.insert(make_pair("Grilled Cheese", 7.55));
     //cout<<"Main Course:"<<endl;
     /*
       for(map<string,double>::iterator it = main_menu_map.begin(); it != main_menu_map.end(); ++it)

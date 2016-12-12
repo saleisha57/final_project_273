@@ -9,7 +9,7 @@ class Finances
   //the amount of expenses that were made in a cycle to be subtracted from the balance
   double expenses;
   //the overall balance of the store
-  double balance;
+  double balance = 0;
 
  public:
   //get balance
@@ -41,12 +41,6 @@ class Finances
 
   //default constructor
   Finances() {};
-
-  /* Finances(double profit, double expense)
-    {
-      making_a_profit(profit);
-      paying_expenses(expense);
-      }*/
 
 };
 
