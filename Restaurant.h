@@ -17,6 +17,7 @@ class Restaurant
 
   Restaurant() {}; //Default constructor.
 
+  ~Restaurant() {};
 
   double run_sim(int clock, int arrival_rate) //Run simulation and return price.
   {
