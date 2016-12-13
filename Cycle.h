@@ -45,6 +45,7 @@ class Cycle
     cout<<"Workers paid: "<<((9.97*total_time)*2)<<endl; //Pay workders.
     fin.paying_expenses((9.97*total_time)*2);            //Re-Set balance.
     cout<<"Current balance: "<<fin.getBalance()<<endl;   //Print balance.
+    fin.setBalance(0.0);
   };
 
 
