@@ -37,8 +37,7 @@ class Restaurant
 	cust_pay = 0; 
 	for(int i = 0; i < arrival_rate; i ++) 
 	  {
-	    //checking to see how many customers are in the queue
-	    cust_pay += custer.make_order();
+	    cust_pay += custer.make_order(); //Adding up the total paid by the customers.
 	  }
 	
 	cust.pop();

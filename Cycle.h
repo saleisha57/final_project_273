@@ -22,11 +22,11 @@ class Cycle
   
   void complete_a_cycle()  //Completes a cycle in the program.
   {  
-    int total_time;        //Total time given by the user.
-    cout<<"Enter total simulation time: "<<endl;
+    unsigned int total_time;        //Total time given by the user.
+    cout<<"Enter total simulation time(in hours): "<<endl;
     cin>>total_time;
     Restaurant r;
-    int clock;
+    unsigned int clock;
     set_cycle(); //Gets information from the user for the max and min times.
     prof = 0;
     for(clock = 0; clock < total_time; clock++)
