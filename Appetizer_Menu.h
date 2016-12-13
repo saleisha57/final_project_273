@@ -3,12 +3,12 @@
 
 #include "Menu.h"
 
-class Appetizer_Menu : public Menu
+class Appetizer_Menu : public Menu //Inheritance
 {
  protected:
 
-  map<string, double> appetizer_menu_map;
-  map<string,double>::iterator it_a;
+  map<string, double> appetizer_menu_map; //Creates map for appetizer menu.
+  map<string, double>::iterator it_a;     //Create iterator for map.
 
  public:
   Appetizer_Menu() {};
@@ -20,51 +20,31 @@ class Appetizer_Menu : public Menu
     
     if( num == 0 ) 
       {
-	it_a = appetizer_menu_map.find("Potato Skin"); // finding tomato soup in map.
-	
-	//	if( it_a != appetizer_menu_map.end() )
-	//cout<<"Order is: "<<it_a->first<<" for: $"<<it_a->second<<endl; // print out order
-	//cout<<""<<endl;
+	it_a = appetizer_menu_map.find("Potato Skin"); // Find potato skin in map.
 	return it_a->second;
       }
 
     if( num == 1 ) 
       {
-	it_a = appetizer_menu_map.find("Cheese Fries"); // finding hamburger in map.
-	
-	//if( it_a != appetizer_menu_map.end() )
-	//cout<<"Order is: "<<it_a->first<<" for: $"<<it_a->second<<endl; // print out order
-	//cout<<""<<endl;
+	it_a = appetizer_menu_map.find("Cheese Fries"); // Find cheese fries in map.
 	return it_a->second;
       }
 
     if( num == 2 ) 
       {
-	it_a = appetizer_menu_map.find("Salad"); // finding corn dog in map.
-	
-	//if( it_a != appetizer_menu_map.end() )
-	//cout<<"Order is: "<<it_a->first<<" for: $"<<it_a->second<<endl; // print out order
-	//cout<<""<<endl;
+	it_a = appetizer_menu_map.find("Salad"); // Find salad in map.
 	return it_a->second;
       }	
 
     if( num == 3 ) 
       {
-	it_a = appetizer_menu_map.find("Bread Sticks"); // finding chicken strips in map.
-	
-	//if( it_a != appetizer_menu_map.end() )
-	//cout<<"Order is: "<<it_a->first<<" for: $"<<it_a->second<<endl; // print out order
-	//cout<<""<<endl;
+	it_a = appetizer_menu_map.find("Bread Sticks"); // Find bread sticks in map.
 	return it_a->second;
       }
 
     if( num == 4 ) 
       {
-	it_a = appetizer_menu_map.find("Fruit Cup"); // finding grilled cheese in map.
-	
-	//if( it_a != appetizer_menu_map.end() )
-	//cout<<"Order is: "<<it_a->first<<" for: $"<<it_a->second<<endl; // print out order
-	//cout<<""<<endl;
+	it_a = appetizer_menu_map.find("Fruit Cup"); // Find fruit cup in map.
 	return it_a->second;
       }
 
@@ -74,20 +54,14 @@ class Appetizer_Menu : public Menu
 
 
 
-  void set_menu()
+  void set_menu() // Sets up the map for the menu.
   {
     appetizer_menu_map.insert(make_pair("Potato Skin", 2.55));
     appetizer_menu_map.insert(make_pair("Cheese Fries", 4.55));
     appetizer_menu_map.insert(make_pair("Salad", 5.55));
     appetizer_menu_map.insert(make_pair("Bread Sticks", 3.55));
     appetizer_menu_map.insert(make_pair("Fruit Cup", 9.99));
-    /*    
-	  cout<<"Appetizer Menu:"<<endl;
-	  for(map<string,double>::iterator it = appetizer_menu_map.begin(); it != appetizer_menu_map.end(); ++it)
-	  cout<<"["<<it->first<<", "<<it->second<<"]"<<endl;
-	  cout<<""<<endl;
-    */  
-}
+  }
 
 
 };

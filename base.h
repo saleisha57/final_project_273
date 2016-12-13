@@ -1,6 +1,9 @@
 #ifndef __BASE_H__
 #define __BASE_H__
 
+//#includes basic needs for the program. 
+//has all of the using std::such and such.
+
 #include<iostream>
 #include<stdlib.h>
 #include<ctime>

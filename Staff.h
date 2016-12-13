@@ -7,9 +7,9 @@ class Staff
 {
  public:
   
-  Staff() {};
+  Staff() {};  //Constructor
   
-  virtual void do_work(int clock) = 0;  
+  virtual void do_work(int clock) = 0;  //Virtual function
   
 };
 

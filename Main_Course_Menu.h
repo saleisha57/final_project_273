@@ -20,51 +20,31 @@ class Main_Course_Menu : public Menu
     
     if( num == 0 ) 
       {
-	it_m = main_menu_map.find("Tomato Soup"); // finding tomato soup in map.
-	
-	//if( it_m != main_menu_map.end() )
-	//cout<<"Order is: "<<it_m->first<<" for: $"<<it_m->second<<endl; // print out order
-	//cout<<""<<endl;
+	it_m = main_menu_map.find("Tomato Soup"); //Find tomato soup in map.
 	return it_m->second;
       }
 
     if( num == 1 ) 
       {
-	it_m = main_menu_map.find("Hamburger"); // finding hamburger in map.
-	
-	//if( it_m != main_menu_map.end() )
-	//cout<<"Order is: "<<it_m->first<<" for: $"<<it_m->second<<endl; // print out order
-	//cout<<""<<endl;
+	it_m = main_menu_map.find("Hamburger"); //Find hamburger in map.
 	return it_m->second;
       }
 
     if( num == 2 ) 
       {
-	it_m = main_menu_map.find("Corn Dog"); // finding corn dog in map.
-	
-	//if( it_m != main_menu_map.end() )
-	//cout<<"Order is: "<<it_m->first<<" for: $"<<it_m->second<<endl; // print out order
-	//cout<<""<<endl;
+	it_m = main_menu_map.find("Corn Dog"); //Find corn dog in map.
 	return it_m->second;
       }	
 
     if( num == 3 ) 
       {
-	it_m = main_menu_map.find("Chicken Strips"); // finding chicken strips in map.
-	
-	//if( it_m != main_menu_map.end() )
-	//cout<<"Order is: "<<it_m->first<<" for: $"<<it_m->second<<endl; // print out order
-	//cout<<""<<endl;
+	it_m = main_menu_map.find("Chicken Strips"); //Find chicken strips in map.
 	return it_m->second;
       }
 
     if( num == 4 ) 
       {
-	it_m = main_menu_map.find("Grilled Cheese"); // finding grilled cheese in map.
-	
-	//	if( it_m != main_menu_map.end() )
-	// cout<<"Order is: "<<it_m->first<<" for: $"<<it_m->second<<endl; // print out order
-	//cout<<""<<endl;
+	it_m = main_menu_map.find("Grilled Cheese"); //Find grilled cheese in map.
 	return it_m->second;
       }
 
@@ -74,19 +54,13 @@ class Main_Course_Menu : public Menu
 
 
 
-  void set_menu()
+  void set_menu() //Set up the map for main course menu.
   {
     main_menu_map.insert(make_pair("Tomato Soup", 4.55));
     main_menu_map.insert(make_pair("Hamburger", 10.55));
     main_menu_map.insert(make_pair("Corn Dog", 5.55));
     main_menu_map.insert(make_pair("Chicken Strips", 11.55));
     main_menu_map.insert(make_pair("Grilled Cheese", 7.55));
-    //cout<<"Main Course:"<<endl;
-    /*
-      for(map<string,double>::iterator it = main_menu_map.begin(); it != main_menu_map.end(); ++it)
-      cout<<"["<<it->first<<", "<<it->second<<"]"<<endl;
-      cout<<""<<endl;
-    */  
   }
 
 

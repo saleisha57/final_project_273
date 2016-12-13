@@ -3,15 +3,15 @@
 
 int main()
 {
-  srand(time(0));
+  srand(time(0)); //Set program time.
 
   bool again = true;
   Cycle c;
   
-  while(again)
+  while(again) //While again, run simulation.
     {
       c.complete_a_cycle(); //Running the simulation
-      again = go_again();
+      again = go_again();   //Ask the user if they want to go again.
     }
 
   return 0;

@@ -3,15 +3,15 @@
 
 #include "Menu.h"
 
-class Drink_Menu : public Menu
+class Drink_Menu : public Menu //Inheritance
 {
  protected:
 
-  map<string, double> drink_menu_map;
-  map<string,double>::iterator it_a;
+  map<string, double> drink_menu_map; //Creates a map for drink menu.
+  map<string,double>::iterator it_a;  //Iterator for the map.
 
  public:
-  Drink_Menu() {};
+  Drink_Menu() {}; //Constructor.
   
 
   double order()
@@ -20,51 +20,31 @@ class Drink_Menu : public Menu
     
     if( num == 0 ) 
       {
-	it_a = drink_menu_map.find("Soft Drink"); // finding tomato soup in map.
-	
-	//if( it_a != drink_menu_map.end() )
-	//cout<<"Order is: "<<it_a->first<<" for: $"<<it_a->second<<endl; // print out order
-	//cout<<""<<endl;
+	it_a = drink_menu_map.find("Soft Drink"); //Find soft drink in map.
 	return it_a->second;
       }
 
     if( num == 1 ) 
       {
-	it_a = drink_menu_map.find("Sweet Tea"); // finding hamburger in map.
-	
-	//if( it_a != drink_menu_map.end() )
-	//cout<<"Order is: "<<it_a->first<<" for: $"<<it_a->second<<endl; // print out order
-	//cout<<""<<endl;
+	it_a = drink_menu_map.find("Sweet Tea"); //Find sweet tea in map.
 	return it_a->second;
       }
 
     if( num == 2 ) 
       {
-	it_a = drink_menu_map.find("Chocolate Milk"); // finding corn dog in map.
-	
-	//	if( it_a != drink_menu_map.end() )
-	// cout<<"Order is: "<<it_a->first<<" for: $"<<it_a->second<<endl; // print out order
-	//cout<<""<<endl;
+	it_a = drink_menu_map.find("Chocolate Milk"); //Find chocolate milk in map.
 	return it_a->second;
       }	
 
     if( num == 3 ) 
       {
-	it_a = drink_menu_map.find("Water"); // finding chicken strips in map.
-	
-	//if( it_a != drink_menu_map.end() )
-	//cout<<"Order is: "<<it_a->first<<" for: $"<<it_a->second<<endl; // print out order
-	//cout<<""<<endl;
+	it_a = drink_menu_map.find("Water"); //Find water in map.
 	return it_a->second;
       }
 
     if( num == 4 ) 
       {
-	it_a = drink_menu_map.find("Fruit Juice"); // finding grilled cheese in map.
-	
-	//if( it_a != drink_menu_map.end() )
-	//cout<<"Order is: "<<it_a->first<<" for: $"<<it_a->second<<endl; // print out order
-	//cout<<""<<endl;
+	it_a = drink_menu_map.find("Fruit Juice"); //Find fruit juice in map.
 	return it_a->second;
       }
 
@@ -74,19 +54,13 @@ class Drink_Menu : public Menu
 
 
 
-  void set_menu()
+  void set_menu() //Sets up the map for drink menu.
   {
     drink_menu_map.insert(make_pair("Soft Drink", 3.99));
     drink_menu_map.insert(make_pair("Sweet Tea", 2.99));
     drink_menu_map.insert(make_pair("Chocolate Milk", 2.99));
     drink_menu_map.insert(make_pair("Water", 1.55));
     drink_menu_map.insert(make_pair("Fruit Juice", 4.99));
-    /*    
-	  cout<<"Drink Menu:"<<endl;
-	  for(map<string,double>::iterator it = drink_menu_map.begin(); it != drink_menu_map.end(); ++it)
-	  cout<<"["<<it->first<<", "<<it->second<<"]"<<endl;
-	  cout<<""<<endl;
-    */
   }
 
 

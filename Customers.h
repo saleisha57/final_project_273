@@ -7,13 +7,13 @@
 #include "Drink_Menu.h"
 #include "Dessert_Menu.h"
 
-class Customers
+class Customers   //Customers class.
 {
   protected:
-  Main_Course_Menu m;
-  Appetizer_Menu a;
-  Drink_Menu d;
-  Dessert_Menu ds;
+  Main_Course_Menu m;  //Main course menu
+  Appetizer_Menu a;    //Appetizer menu.
+  Drink_Menu d;        //Drink menu
+  Dessert_Menu ds;     //Dessert menu
 
  public:
   //default constructor
@@ -27,45 +27,33 @@ class Customers
   //function to allow the customer to make orders
   double make_order()
   {
-    int num = rand() % 10;
+    int num = rand() % 10; //Random number between 0 and 9.
     double amt = 0;
     
-    if(num >= 0 && num < 10)
+    if(num >= 0 && num < 10)  //Customer orders from main course menu 100% of the time.
       {
 	m.set_menu();
 	amt += m.order();
       }
-    if(num >= 3 && num < 10)
+    if(num >= 3 && num < 10) //Customer orders from drink menu 70% of the time.
       {
 	d.set_menu();
-	amt += d.order();
+	amt += d.order(); 
       }
-    if(num >= 6 && num < 10)
+    if(num >= 6 && num < 10) //Customer orders from appetizer menu 40% of the time.
       {
 	a.set_menu();
 	amt += a.order();	
       }
-    if(num >= 8 && num < 10)
+    if(num >= 8 && num < 10) //Customer orders from dessert menu 20% of the time.
       {
 	ds.set_menu();
 	amt += ds.order();
       }
-
-    // cout<<"Price amount is: "<<amt<<endl;
     
-    eat();
-
-    //  cout<<"Customers and num is: "<<num<<endl;
-
-    return amt;
+    return amt;  //Return the amount the customer pays on food.
   }
-  
-  void eat()
-  {
-    //cout<<"tables: "<<endl; //leaving in cout to test entrance to function. (WILL IMPLEMENT WHEN TIME SET UP PROPERLY)
-  }
-  
-  
+   
 
 };
 

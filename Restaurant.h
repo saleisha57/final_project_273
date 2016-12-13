@@ -10,8 +10,7 @@ class Restaurant
 {
  private:
 
-  unsigned short int user_choice;
-  queue<Customers *> cust;
+  queue<Customers *> cust;        //queue of customers.
   double cust_pay;
   
  public:
@@ -19,24 +18,24 @@ class Restaurant
   Restaurant() {}; //Default constructor.
 
 
-  double run_sim(int clock, int arrival_rate)
+  double run_sim(int clock, int arrival_rate) //Run simulation and return price.
   {
-    return do_stuff(clock, arrival_rate); 
+    return do_stuff(clock, arrival_rate); //Return from do_stuff()
   }
   
   
-  double do_stuff(int clock, int arrival_rate)
+  double do_stuff(int clock, int arrival_rate) //Handles work with the queue.
   {//will run the simulation.
     
     if(((rand()) / RAND_MAX) < arrival_rate)
-      cust.push(new Customers(arrival_rate));
+      cust.push(new Customers(arrival_rate)); //Push new customer into queue.
     
     if(!cust.empty())
       {
 	Customers custer;
 	
 	cust_pay = 0; 
-	for(int i = 0; i < arrival_rate; i ++) // testing the ammount of money coming in from customers.
+	for(int i = 0; i < arrival_rate; i ++) 
 	  {
 	    //checking to see how many customers are in the queue
 	    cust_pay += custer.make_order();
@@ -44,15 +43,11 @@ class Restaurant
 	
 	cust.pop();
 	
-	return cust_pay;
+	return cust_pay; //Return what the customer paid.
       }
     
     return 0;
   }
-   
-  
-  
-  //friend class Customers;
 
 };
 

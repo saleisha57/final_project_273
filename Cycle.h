@@ -11,50 +11,45 @@ class Cycle
 {
 
  private:
-  int hour = 0;
-  const int ONE_CYLCE = 24 * hour;
-  unsigned short int max_c, min_c, max_s, min_s; //two protected ints for min and max.
-  unsigned short int arrival_rate;
-  Finances fin;
-  double prof, exp;
+  
+  unsigned short int max_c, min_c, max_s, min_s; //Max and min for cooks and servers.
+  unsigned short int arrival_rate;               //Arrival rate.
+  Finances fin;                                  //Finances.
+  double prof, exp;                              //Profits and expenses.
 
  public:
   Cycle() {};
   
-  void complete_a_cycle()
+  void complete_a_cycle()  //Completes a cycle in the program.
   {  
-    int total_time;
+    int total_time;        //Total time given by the user.
     cout<<"Enter total simulation time: "<<endl;
     cin>>total_time;
     Restaurant r;
     int clock;
-    set_cycle();
+    set_cycle(); //Gets information from the user for the max and min times.
     prof = 0;
     for(clock = 0; clock < total_time; clock++)
-      {
-		
-	Cook co(max_c, min_c);
-	co.do_work(clock);
-	Servers s(max_s, min_s);
+      {		
+	Cook co(max_c, min_c);    //Create cooks
+	co.do_work(clock); 
+	Servers s(max_s, min_s);  //Create servers
 	s.do_work(clock);
 	
-       	prof += r.run_sim(clock, arrival_rate);
+       	prof += r.run_sim(clock, arrival_rate);  //Run simulation and set prof to the return value.
 
 	fin.setProfits(prof);
-	//cout<<"PROFITS: "<<fin.getProfits()<<endl;
-	//cout<<""<<endl;
-	
       }
-    fin.making_a_profit(fin.getProfits());
-    cout<<"Current balance: "<<fin.getBalance()<<endl;
-    cout<<"Workers paid: "<<((9.97*total_time)*2)<<endl;
-    fin.paying_expenses((9.97*total_time)*2);
-    cout<<"Current balance: "<<fin.getBalance()<<endl;
+    fin.making_a_profit(fin.getProfits());               //Set balance.
+    cout<<"Current balance: "<<fin.getBalance()<<endl;   //Print balance.
+    cout<<"Workers paid: "<<((9.97*total_time)*2)<<endl; //Pay workders.
+    fin.paying_expenses((9.97*total_time)*2);            //Re-Set balance.
+    cout<<"Current balance: "<<fin.getBalance()<<endl;   //Print balance.
   };
 
 
 
-  void set_cycle()
+  void set_cycle() //Asks the user for input for arrival rate, and max and min times.
   {
     cout<<"Enter customer arrival rate: "<<endl;
     cin>>arrival_rate;
@@ -86,8 +81,7 @@ class Cycle
 	cout<<"Enter max serving time: "<<endl;
 	cin>>max_s;	
       }
-
-
+    
   };
 
 

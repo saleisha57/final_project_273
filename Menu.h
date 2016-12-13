@@ -5,26 +5,13 @@
 
 class Menu
 {
- protected:
-  //  double price;
-  // string menu_type;
- 
-
  public:
   
-  Menu() {};
+  Menu() {}; //Constructor
   
-  virtual double order() = 0;
-  /*
-  void SetPrice(double number)
-  {
-    price = number;        TESTING SOME STUFF OUT
-  };
-  */
+  virtual double order() = 0;  //Virtual method
 
-  virtual void set_menu() = 0;
-
-
+  virtual void set_menu() = 0; //Virtual method
 };
 
 
