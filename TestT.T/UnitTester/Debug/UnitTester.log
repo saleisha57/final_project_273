@@ -1,0 +1,5 @@
+﻿  unittest1.cpp
+c:\users\jabbott19\desktop\testt.t\testt.t\cycle.h(42): warning C4018: '<': signed/unsigned mismatch
+     Creating library C:\Users\jabbott19\Desktop\TestT.T\Debug\UnitTester.lib and object C:\Users\jabbott19\Desktop\TestT.T\Debug\UnitTester.exp
+  UnitTester.vcxproj -> C:\Users\jabbott19\Desktop\TestT.T\Debug\UnitTester.dll
+  UnitTester.vcxproj -> C:\Users\jabbott19\Desktop\TestT.T\Debug\UnitTester.pdb (Full PDB)

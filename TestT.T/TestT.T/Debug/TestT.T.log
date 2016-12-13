@@ -1,0 +1,5 @@
+﻿  main.cpp
+c:\users\jabbott19\desktop\testt.t\testt.t\cycle.h(42): warning C4018: '<': signed/unsigned mismatch
+c:\users\jabbott19\desktop\testt.t\testt.t\main.cpp(6): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
+c:\users\jabbott19\desktop\testt.t\testt.t\cycle.h(33): warning C4700: uninitialized local variable 'total_time' used
+  TestT.T.vcxproj -> C:\Users\jabbott19\Desktop\TestT.T\Debug\TestT.T.lib
