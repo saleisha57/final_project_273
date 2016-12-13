@@ -20,31 +20,46 @@ class Appetizer_Menu : public Menu //Inheritance
     
     if( num == 0 ) 
       {
-	it_a = appetizer_menu_map.find("Potato Skin"); // Find potato skin in map.
+	it_a = appetizer_menu_map.find("Potato Skin"); // Find potato skin in map.	
+	if( it_a != appetizer_menu_map.end() )
+	  cout<<"Order is: "<<it_a->first<<" for: $"<<it_a->second<<endl; // print out order
+	cout<<""<<endl;
 	return it_a->second;
       }
 
     if( num == 1 ) 
       {
 	it_a = appetizer_menu_map.find("Cheese Fries"); // Find cheese fries in map.
+	if( it_a != appetizer_menu_map.end() )
+	  cout<<"Order is: "<<it_a->first<<" for: $"<<it_a->second<<endl; // print out order
+	cout<<""<<endl;
 	return it_a->second;
       }
 
     if( num == 2 ) 
       {
 	it_a = appetizer_menu_map.find("Salad"); // Find salad in map.
+	if( it_a != appetizer_menu_map.end() )
+	  cout<<"Order is: "<<it_a->first<<" for: $"<<it_a->second<<endl; // print out order
+	cout<<""<<endl;
 	return it_a->second;
       }	
 
     if( num == 3 ) 
       {
 	it_a = appetizer_menu_map.find("Bread Sticks"); // Find bread sticks in map.
+	if( it_a != appetizer_menu_map.end() )
+	  cout<<"Order is: "<<it_a->first<<" for: $"<<it_a->second<<endl; // print out order
+	cout<<""<<endl;
 	return it_a->second;
       }
 
     if( num == 4 ) 
       {
 	it_a = appetizer_menu_map.find("Fruit Cup"); // Find fruit cup in map.
+	if( it_a != appetizer_menu_map.end() )
+	  cout<<"Order is: "<<it_a->first<<" for: $"<<it_a->second<<endl; // print out order
+	cout<<""<<endl;
 	return it_a->second;
       }
 

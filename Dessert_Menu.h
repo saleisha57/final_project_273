@@ -8,7 +8,7 @@ class Dessert_Menu : public Menu  //Inheritance
  protected:
 
   map<string, double> dessert_menu_map;  //map for dessert menu.
-  map<string,double>::iterator it_a;     //Iterator for map.
+  map<string,double>::iterator it_ds;     //Iterator for map.
 
  public:
   Dessert_Menu() {}; //Constructor.
@@ -20,32 +20,47 @@ class Dessert_Menu : public Menu  //Inheritance
     
     if( num == 0 ) 
       {
-	it_a = dessert_menu_map.find("Cake"); //Find cake in map.
-	return it_a->second;
+	it_ds = dessert_menu_map.find("Cake"); //Find cake in map.
+	if( it_ds != dessert_menu_map.end() )
+	  cout<<"Order is: "<<it_ds->first<<" for: $"<<it_ds->second<<endl; // print out order
+	cout<<""<<endl;
+	return it_ds->second;
       }
 
     if( num == 1 ) 
       {
-	it_a = dessert_menu_map.find("Pie"); //Find pie in map
-	return it_a->second;
+	it_ds = dessert_menu_map.find("Pie"); //Find pie in map
+	if( it_ds != dessert_menu_map.end() )
+	  cout<<"Order is: "<<it_ds->first<<" for: $"<<it_ds->second<<endl; // print out order
+	cout<<""<<endl;
+	return it_ds->second;
       }
 
     if( num == 2 ) 
       {
-	it_a = dessert_menu_map.find("Cookie"); //Find cookie in map.
-	return it_a->second;
+	it_ds = dessert_menu_map.find("Cookie"); //Find cookie in map.
+	if( it_ds != dessert_menu_map.end() )
+	  cout<<"Order is: "<<it_ds->first<<" for: $"<<it_ds->second<<endl; // print out order
+	cout<<""<<endl;
+	return it_ds->second;
       }	
 
     if( num == 3 ) 
       {
-	it_a = dessert_menu_map.find("Ice Cream"); //Find ice cream in map.
-	return it_a->second;
+	it_ds = dessert_menu_map.find("Ice Cream"); //Find ice cream in map.
+	if( it_ds != dessert_menu_map.end() )
+	  cout<<"Order is: "<<it_ds->first<<" for: $"<<it_ds->second<<endl; // print out order
+	cout<<""<<endl;
+	return it_ds->second;
       }
 
     if( num == 4 ) 
       {
-	it_a = dessert_menu_map.find("Creme Brulee"); //Find creme brulee in map.
-	return it_a->second;
+	it_ds = dessert_menu_map.find("Creme Brulee"); //Find creme brulee in map.
+	if( it_ds != dessert_menu_map.end() )
+	  cout<<"Order is: "<<it_ds->first<<" for: $"<<it_ds->second<<endl; // print out order
+	cout<<""<<endl;
+	return it_ds->second;
       }
 
     return 0;

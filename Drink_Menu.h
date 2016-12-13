@@ -8,7 +8,7 @@ class Drink_Menu : public Menu //Inheritance
  protected:
 
   map<string, double> drink_menu_map; //Creates a map for drink menu.
-  map<string,double>::iterator it_a;  //Iterator for the map.
+  map<string,double>::iterator it_d;  //Iterator for the map.
 
  public:
   Drink_Menu() {}; //Constructor.
@@ -20,32 +20,47 @@ class Drink_Menu : public Menu //Inheritance
     
     if( num == 0 ) 
       {
-	it_a = drink_menu_map.find("Soft Drink"); //Find soft drink in map.
-	return it_a->second;
+	it_d = drink_menu_map.find("Soft Drink"); //Find soft drink in map.
+	if( it_d != drink_menu_map.end() )
+	  cout<<"Order is: "<<it_d->first<<" for: $"<<it_d->second<<endl; // print out order
+	cout<<""<<endl;
+	return it_d->second;
       }
 
     if( num == 1 ) 
       {
-	it_a = drink_menu_map.find("Sweet Tea"); //Find sweet tea in map.
-	return it_a->second;
+	it_d = drink_menu_map.find("Sweet Tea"); //Find sweet tea in map.
+	if( it_d != drink_menu_map.end() )
+	  cout<<"Order is: "<<it_d->first<<" for: $"<<it_d->second<<endl; // print out order
+	cout<<""<<endl;
+	return it_d->second;
       }
 
     if( num == 2 ) 
       {
-	it_a = drink_menu_map.find("Chocolate Milk"); //Find chocolate milk in map.
-	return it_a->second;
+	it_d = drink_menu_map.find("Chocolate Milk"); //Find chocolate milk in map.
+	if( it_d != drink_menu_map.end() )
+	  cout<<"Order is: "<<it_d->first<<" for: $"<<it_d->second<<endl; // print out order
+	cout<<""<<endl;
+	return it_d->second;
       }	
 
     if( num == 3 ) 
       {
-	it_a = drink_menu_map.find("Water"); //Find water in map.
-	return it_a->second;
+	it_d = drink_menu_map.find("Water"); //Find water in map.
+	if( it_d != drink_menu_map.end() )
+	  cout<<"Order is: "<<it_d->first<<" for: $"<<it_d->second<<endl; // print out order
+	cout<<""<<endl;
+	return it_d->second;
       }
 
     if( num == 4 ) 
       {
-	it_a = drink_menu_map.find("Fruit Juice"); //Find fruit juice in map.
-	return it_a->second;
+	it_d = drink_menu_map.find("Fruit Juice"); //Find fruit juice in map.
+	if( it_d != drink_menu_map.end() )
+	  cout<<"Order is: "<<it_d->first<<" for: $"<<it_d->second<<endl; // print out order
+	cout<<""<<endl;
+	return it_d->second;
       }
 
     return 0;

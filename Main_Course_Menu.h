@@ -21,30 +21,45 @@ class Main_Course_Menu : public Menu
     if( num == 0 ) 
       {
 	it_m = main_menu_map.find("Tomato Soup"); //Find tomato soup in map.
+	if( it_m != main_menu_map.end() )
+	  cout<<"Order is: "<<it_m->first<<" for: $"<<it_m->second<<endl; // print out order
+	cout<<""<<endl;
 	return it_m->second;
       }
 
     if( num == 1 ) 
       {
 	it_m = main_menu_map.find("Hamburger"); //Find hamburger in map.
+if( it_m != main_menu_map.end() )
+	  cout<<"Order is: "<<it_m->first<<" for: $"<<it_m->second<<endl; // print out order
+	cout<<""<<endl;
 	return it_m->second;
       }
 
     if( num == 2 ) 
       {
 	it_m = main_menu_map.find("Corn Dog"); //Find corn dog in map.
+	if( it_m != main_menu_map.end() )
+	  cout<<"Order is: "<<it_m->first<<" for: $"<<it_m->second<<endl; // print out order
+	cout<<""<<endl;
 	return it_m->second;
       }	
 
     if( num == 3 ) 
       {
 	it_m = main_menu_map.find("Chicken Strips"); //Find chicken strips in map.
+	if( it_m != main_menu_map.end() )
+	  cout<<"Order is: "<<it_m->first<<" for: $"<<it_m->second<<endl; // print out order
+	cout<<""<<endl;
 	return it_m->second;
       }
 
     if( num == 4 ) 
       {
 	it_m = main_menu_map.find("Grilled Cheese"); //Find grilled cheese in map.
+	if( it_m != main_menu_map.end() )
+	  cout<<"Order is: "<<it_m->first<<" for: $"<<it_m->second<<endl; // print out order
+	cout<<""<<endl;
 	return it_m->second;
       }
 
