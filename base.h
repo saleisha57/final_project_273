@@ -5,9 +5,9 @@
 //has all of the using std::such and such.
 
 #include<iostream>
-#include<stdlib.h>
+#include<cstdlib>
 #include<ctime>
-#include<string.h>
+#include<string>
 #include<queue>
 #include<map>
 
