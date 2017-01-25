@@ -1,0 +1,210 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<logicalClassDesignerModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm4="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" dslVersion="1.0.0.0" Id="e6a1d493-8f4f-4cad-b4cb-f9dc268fca61" name="Final Project" linkedPackageId="ff1ddc8f-26cd-48ef-83ae-381c8b38f0ed" xmlns="http://schemas.microsoft.com/dsltools/LogicalClassDesigner">
+  <profileInstances>
+    <packageHasProfileInstances Id="8c391468-1470-4e83-96a7-7292bc9da031">
+      <profileInstance Id="4fbae97b-080a-4176-bb9e-f3aec5f25779" name="StandardProfileL2">
+        <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
+      </profileInstance>
+      <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
+    </packageHasProfileInstances>
+    <packageHasProfileInstances Id="f0b55974-3629-45dd-9c11-5a1826635460">
+      <profileInstance Id="757558f0-b288-451e-b76c-fed159d903cb" name="StandardProfileL3">
+        <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
+      </profileInstance>
+      <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
+    </packageHasProfileInstances>
+  </profileInstances>
+  <packagedElements>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="05b0b000-d5cf-47c4-9af7-c02da46b2547" name="Main" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="93f98d1d-7a8b-4350-a579-0d5bd3e70171" />
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <Interface Id="05c99c5c-2cab-4509-bf65-5fa27247ec7d" name="Storage" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="92aacfcf-07f1-4348-a0a5-da985089964a" />
+        <targetEnds>
+          <association Id="b54cfede-6192-4eec-8018-50f131d7b5ca" isDerived="false" sourceEndRoleName="Storage" targetEndRoleName="Yarn" isLeaf="false" isAbstract="false">
+            <classMoniker Id="31611619-d938-4c75-86b7-59cff0e00e7c" LastKnownName="Yarn" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="40a280c0-ed01-4c73-8665-a58f1591c489" name="Storage" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="4d3262c1-8f0c-4eea-a147-765f0fd34631" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="cf902144-2afb-4e13-af09-f9e04840aa2b" name="Yarn" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="96ea282e-c719-4e00-8644-31b8d597f94c" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="a2ea51db-95a9-47de-a3ad-726f592d449a" />
+          </association>
+          <association Id="b64680ac-c5ce-4a9c-9550-9a2c5d0b1180" isDerived="false" sourceEndRoleName="Storage" targetEndRoleName="Needles" isLeaf="false" isAbstract="false">
+            <classMoniker Id="beb4f73f-e3e3-4cab-8123-218fb3f63bc2" LastKnownName="Needles" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="d93786f8-e947-4221-aeb6-4d87d89eb14b" name="Storage" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="a0167456-88ff-4d6f-9dd7-9e1ff4c03a98" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="213a2387-1e15-448a-bef9-d37c7978393a" name="Needles" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="d19b6c42-0fa9-4a06-bad2-eddafc263e1f" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="9785f26a-1ea5-4f9c-9b7e-f80013becff8" />
+          </association>
+          <association Id="c3616376-30f4-4822-a3e6-177255cd4cb7" isDerived="false" sourceEndRoleName="Storage" targetEndRoleName="Pattern" isLeaf="false" isAbstract="false">
+            <classMoniker Id="4c780117-e0fa-4b4a-901e-0c35347ca6a5" LastKnownName="Pattern" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="e962bc3d-2e2c-494d-995a-d0f1f231a9a4" name="Storage" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="79d00532-894a-4032-9761-52d263f36e83" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="62ca8e2d-8f31-4e98-908a-29af07a67ff1" name="Pattern" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="f382da49-6d13-43fc-9167-c2d8baa8bcc3" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="9515de4c-f386-4b1a-82d4-a651ca970138" />
+          </association>
+        </targetEnds>
+        <ownedAttributes>
+          <property Id="ba39302b-e5b8-4397-a789-9bbe3c013e25" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="4d22a346-920c-40b0-b261-b4f61afc7cb2" />
+          </property>
+        </ownedAttributes>
+        <ownedOperations>
+          <operation Id="e2a83907-337d-450f-a428-ab25dffba36b" name="readInFile" isLeaf="false" isStatic="false" isAbstract="true" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="409e379b-c282-4528-9a75-8ca3c69c4a04" />
+          </operation>
+          <operation Id="c59bea14-49b7-4902-bfee-ac08da82ed02" name="saveFile" isLeaf="false" isStatic="false" isAbstract="true" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="2409f9a6-5e21-433e-a48c-87e067417d2f" />
+          </operation>
+          <operation Id="6486f241-c42f-41e8-8b7d-17d77453f72a" name="addImage" isLeaf="false" isStatic="false" isAbstract="true" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="89a86c05-0158-4281-97ec-7c0e50f997ac" />
+          </operation>
+        </ownedOperations>
+      </Interface>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="31611619-d938-4c75-86b7-59cff0e00e7c" name="Yarn" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="03e6304a-439a-497a-97f4-30f46647f046" />
+        <ownedAttributesInternal>
+          <property Id="e30aae29-aa74-497c-9f0a-a0e3f283cbfa" name="String fiber" visibility="Private" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="7bc76aaf-ca1b-4daa-be35-1a667ef59b9e" />
+          </property>
+          <property Id="fb2ea30a-7b5a-4ea4-ad3c-df3be1874d09" name="int weight" visibility="Private" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="dd06a137-b6db-4d02-b51a-ae27ae7e7cad" />
+          </property>
+          <property Id="f089c849-f586-4c36-a233-9bf648686cb0" name="String color" visibility="Private" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="386534ae-4f8a-4902-811a-c95085dfe63e" />
+          </property>
+          <property Id="423bb7fc-82ed-4d3f-9894-16decded082a" name="int lotNumber" visibility="Private" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="f359ab30-26ff-47ef-a867-735e4f9f376f" />
+          </property>
+          <property Id="344dabeb-4a43-48bb-8c07-c3e3b68837a9" name="String brand" visibility="Private" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="5da0645d-a35b-439a-888c-cbe50e895883" />
+          </property>
+          <property Id="45aa3b20-3934-4b94-9c3b-383b0aac9a0c" name="bool favorite" visibility="Private" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="e2adba83-f1e6-4120-b0e5-0532c3fd904d" />
+          </property>
+          <property Id="4080e38b-4afd-4053-8115-c7fbaf581569" name="int yardage" visibility="Private" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="b4927021-5e1b-48fd-908a-43435554c02b" />
+          </property>
+          <property Id="137c23ed-4fe6-4aa9-8e75-84b0b3bc0794" name="bool inUse" visibility="Private" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="c5995d37-8428-4d2e-8c99-18a2a164420b" />
+          </property>
+          <property Id="a0c9de7b-dd8e-4b0e-aeb0-265612f48075" name="String addNotes" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="bb729e69-d927-4afe-95ed-b1b37906cc03" />
+          </property>
+          <property Id="57b08e83-309a-4776-83d8-9f0be83c1891" name="Image image" visibility="Private" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="8fe6551d-5e73-4efc-aac0-b8da9455a087" />
+          </property>
+        </ownedAttributesInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="beb4f73f-e3e3-4cab-8123-218fb3f63bc2" name="Needles" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="b472f032-df33-450b-962c-6e287f2c153d" />
+        <ownedAttributesInternal>
+          <property Id="6ba6fd15-c0a7-44a4-901c-b3b9c84382c2" name="Int size" visibility="Private" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="6cc53efb-2bb8-485c-844f-fda6de7060a0" />
+          </property>
+          <property Id="313b8a76-c1c6-4dc7-8b15-b73463b440c6" name="bool circular" visibility="Private" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="0a87c5c8-21aa-4d8f-9dae-20b5d13ad283" />
+          </property>
+          <property Id="b37f585e-0369-4a11-9c71-852849cb4f1d" name="bool doublePointed" visibility="Private" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="a790e9e6-6289-4023-806a-1dbb88e934f7" />
+          </property>
+          <property Id="6a34237c-48ad-4aef-9b6f-000a3156b6fe" name="bool straight" visibility="Private" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="3d43b783-e546-4552-b40f-a3c5ee052bf1" />
+          </property>
+          <property Id="d285b1bb-53d1-4a37-9d9e-c3e84922c11a" name="int length" visibility="Private" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="09bd43d3-fbb1-46b8-8b53-fde58f3d130f" />
+          </property>
+          <property Id="e9215e3b-9526-41ec-8c5a-bfad610f348a" name="String material" visibility="Private" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="49e3deb6-19d7-4e60-985a-275fe8db18b6" />
+          </property>
+          <property Id="21fa25a0-19f7-45fc-a6cf-df4a39b09a74" name="bool inUse" visibility="Private" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="f5caedc2-8bbe-4b82-bf5e-a47fbac6a4a5" />
+          </property>
+          <property Id="6f48778d-3f4e-4b00-bb75-b997a1856396" name="bool favorite" visibility="Private" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="3014166e-7893-49d4-a31c-c569e6dd20cc" />
+          </property>
+          <property Id="47227178-f281-4b44-875d-787e58ede30c" name="bool addNotes" visibility="Private" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="13951bbf-e4b3-415e-82d1-dd7e22d352af" />
+          </property>
+          <property Id="4b3467c9-a8e5-4870-be97-8ffaddb1f602" name="String brand" visibility="Private" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="cd620437-3515-461b-aa07-5dded78e7091" />
+          </property>
+          <property Id="eb828648-f9ec-476c-856d-b061b2ea1834" name="Image image" visibility="Private" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="4393dffa-2135-4700-952f-5cf11b540af4" />
+          </property>
+        </ownedAttributesInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="4c780117-e0fa-4b4a-901e-0c35347ca6a5" name="Pattern" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="edba2a37-a24c-417a-ac8b-cb82ade64fab" />
+        <ownedAttributesInternal>
+          <property Id="ecb0e182-21dd-42ae-aa63-67cc673c711f" name="String category" visibility="Private" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="ad5bbf05-6b09-41de-8442-81375302baa0" />
+          </property>
+          <property Id="0beb2c8a-0796-4553-8c0a-07b48b0900a1" name="bool inProgress" visibility="Private" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="3fa6592c-ca5b-41ca-8566-4d9472cac065" />
+          </property>
+          <property Id="2d1771ca-96a0-447f-93f4-ec28baa5c4bb" name="String yarn" visibility="Private" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="0fbb3c24-8dc9-423f-8e2b-986f4c46c7c4" />
+          </property>
+          <property Id="f20a2f45-4296-4092-93f6-bfaee803341f" name="String needles" visibility="Private" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="900f16cb-8d4c-4bd2-a4ec-df55bc33554f" />
+          </property>
+          <property Id="395756d5-3117-4500-b6ff-36af5272bb00" name="double gauge" visibility="Private" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="8f6e6119-9972-465a-a3c6-d9e78caba41f" />
+          </property>
+          <property Id="9a7f3919-f54a-4d85-91a9-6fa465e9ccbc" name="Image image" visibility="Private" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="a1eaea94-d261-4c04-986d-2c814ef5263f" />
+          </property>
+        </ownedAttributesInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="888845c7-fb9a-4346-b43e-6381a3fb3c04" name="ReadIn" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="9c7f3e1c-c07a-43cf-9398-b5be8db849c7" />
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="bd007858-2a76-482b-ae09-374017991ee8" name="Window" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="31c53b4b-20df-41b1-91ab-c544f4483816" />
+      </class>
+    </logicalClassDesignerModelHasTypes>
+  </packagedElements>
+  <package Id="ff1ddc8f-26cd-48ef-83ae-381c8b38f0ed" name="Knitting App">
+    <elementDefinition Id="e92b415d-b9b2-47bc-98c6-d00bdf898c6b" />
+  </package>
+</logicalClassDesignerModel>
